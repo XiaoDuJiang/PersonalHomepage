@@ -21,4 +21,10 @@ return array(
 
     //错误显示开启
     'SHOW_PAGE_TRACE'=>true,
+
+    'TMPL_PARSE_STRING'  =>array(
+        '__JS__' => '../../Public/resource/js',
+        '__CSS__' => '../../Public/resource/css',
+        '__IMG__' => '../../Public/resource/img',
+    ),
 );
