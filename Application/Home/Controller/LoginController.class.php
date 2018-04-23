@@ -15,19 +15,6 @@ class LoginController extends Controller
 {
 
     /**
-     * 显示页面方法
-     */
-    public function login()
-    {
-        $this->display();
-    }
-
-    public function register()
-    {
-        $this->display();
-    }
-
-    /**
      * 登录
      * @return mixed 返回登录结果
      */
@@ -45,10 +32,10 @@ class LoginController extends Controller
                     $result = json_encode($result);
                     $this->ajaxReturn($result);
                 } catch (Exception $e) {
-                    echo $e->getMessage();
+                    $this->ajaxReturn('{"msg":"系统错误","status": 0}');
                 }
             } else {
-                $this->ajaxReturn('{"msg":"参数错误"}');
+                $this->ajaxReturn('{"msg":"参数错误","status": 0}');
             }
         }
     }
@@ -65,7 +52,7 @@ class LoginController extends Controller
             //title自动生成
             $userM->title = $_POST['username'] . '的小窝';
             //createtime生成
-            $userM->createtime = date("Y-m-d",time());
+            $userM->createtime = date("Y-m-d", time());
 
             $userLogic = D('User', 'Logic');
             $result = $userLogic->userRegister($userM, $_POST['testcode'], $_POST['repwd']);
@@ -78,7 +65,8 @@ class LoginController extends Controller
     /**
      * 用户注销
      */
-    public function userCancel() {
+    public function userCancel()
+    {
         if (IS_AJAX) {
             $userLogic = D('User', 'Logic');
             $result = $userLogic->userCancel();
@@ -97,7 +85,6 @@ class LoginController extends Controller
             $result = $userLogic->getUserInfoBySession();
             $result = json_encode($result);
             $this->ajaxReturn($result);
-            echo $result;
         }
     }
 }

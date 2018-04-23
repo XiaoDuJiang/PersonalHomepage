@@ -146,6 +146,10 @@ class  UserLogic extends Model
                         //验证两次密码
                         if ($repwd == $user->password) {
                             $user->password = md5($user->password);
+                            $t = time();
+                            $t = date('Y-m-d H-i-s',$t);
+                            $user->createtime = $t;
+
                             //保存
                             $user->add();
                             //邀请码加一
