@@ -42,16 +42,18 @@ require(['jquery', 'viewer'], function($) {
 	function bindUserBoxFixed() {
 		//userbox距离顶端距离 - 50
 		var userOffsetTop = $(".user-box").offset().top - 180;
-		var userOffsetLeft = $(".user-box").offset().left;
+		
 		//窗口滚动监测
 		window.onscroll = function() {
+			var userOffsetLeft = $(".user-box").offset().left;
 			//窗口滚动距离
 			var moveTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+			var moveLeft = window.pageXOffset || document.documentElement.scrollLeft || document.body.scrollLeft || 0;
 			//变成fixed
 			if(moveTop > userOffsetTop && $(".user-box").css("position").indexOf('absolute') != -1) {
 				$(".user-box").css("position", "fixed");
 				$(".user-box").css("top", "180px");
-				$(".user-box").css("left", userOffsetLeft + "px");
+				$(".user-box").css("left", userOffsetLeft-moveLeft + "px");
 				$(".user-box").css("right", "auto");
 			}
 			//变成absoulute
