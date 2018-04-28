@@ -12,12 +12,7 @@ use Think\Controller;
 
 class IndexController extends Controller
 {
-    /**
-     * 显示页面方法
-     */
-    public function index()
-    {
-        $this->display();
-    }
+    
+    
 
 }

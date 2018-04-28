@@ -1,0 +1,196 @@
+ul,
+li {
+	list-style: none;
+}
+
+.clearfix:after {
+	content: ".";
+	height: 0;
+	display: block;
+	visibility: hidden;
+	clear: both;
+}
+
+.clearfix {
+	*zoom: 1;
+}
+
+.search-box {
+	/*避免用户选中搜索两字*/
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.select-div {
+	height: 30px;
+	font-size: 14px;
+	line-height: 30px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.select-div,
+.search-input-box {
+	display: inline-block;
+}
+
+.select-div>div {
+	border: 1px solid #e7e7e7;
+	cursor: pointer;
+	padding: 0px 25px 0px 5px;
+	background-color: #1ab394;
+	color: white;
+	border-radius: 5px;
+	position: relative;
+}
+
+.select-div>div>span {
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	right: 5px;
+	top: 8px;
+	background: url(img/down.png);
+}
+
+.select-div ul {
+	padding: 0px;
+	margin: 1px;
+	display: none;
+	text-align: center;
+	border: 1px solid #999;
+	border-radius: 5px;
+	background-color: white;
+	position: absolute;
+	z-index: 2;
+	box-shadow: 1px 1px 1px gray;
+}
+
+.select-div ul li:first-child {
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+}
+
+.select-div ul li:last-child {
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+.select-div ul li {
+	border-bottom: 1px solid #e7e7e7;
+	cursor: pointer;
+	padding: 0 15px;
+	background-color: white;
+}
+
+.select-div ul li:hover {
+	background-color: #E7E7E7;
+	color: #1ab394;
+}
+
+.search-input-box input {
+	margin: 0px 10px;
+	height: 30px;
+	width: 8em;
+	border: 1px solid rgb(229, 230, 231);
+	padding: 6px 12px;
+}
+
+.search-input-box input:hover,
+.search-input-box input:focus {
+	border: 1px solid #1ab394;
+}
+
+.search-box-firstline {
+	padding: 20px 20px 0 10px;
+	position: relative;
+	bottom: -5px;
+}
+
+.search-box-firstline>div {
+	float: left;
+	text-align: center;
+	margin-left: 10px;
+	margin-bottom: 5px;
+}
+
+.search-submit {
+	margin-left: 15px;
+	margin-top: 1px;
+	float: right;
+	height: 30px;
+	line-height: 30px;
+	font-size: 16px;
+	width: 80px;
+	background-color: #1ab394;
+	color: white;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.search-submit:hover {
+	box-shadow: 1px 1px 1px #1ab394;
+}
+
+.search-box-lastline {
+	padding: 5px 5px 0px 5px;
+	position: relative;
+	bottom: -10px;
+}
+
+.search-box-lastline>div {
+	float: left;
+}
+
+.check-div {
+	margin-left: 20px;
+	cursor: pointer;
+}
+
+.check-div div {
+	float: left;
+}
+
+.check-div div span {
+	display: inline-block;
+	height: 15px;
+	width: 15px;
+}
+
+.check-div div .checked {
+	background-image: url(img/checked.png);
+}
+
+.check-div div .notchecked {
+	background-image: url(img/notchecked.png);
+}
+
+.check-title {
+	font-size: 14px;
+	line-height: 15px;
+	margin-left: 5px;
+	color: #bfbfbf;
+}
+
+.download {
+	position: absolute;
+	width: 110px;
+	height: 32px;
+	background-color: orange;
+	color: white;
+	font-size: 14px;
+	right: 25px;
+	line-height: 32px;
+	margin-top: 10px;
+	margin-left: 0px !important;
+	margin-bottom: 0px !important;
+	border-radius: 5px;
+	text-align: center;
+	cursor: pointer;
+}
+
+.download:hover {
+	box-shadow: 1px 1px 1px orange;
+}
