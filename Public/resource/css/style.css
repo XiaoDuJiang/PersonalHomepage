@@ -207,6 +207,14 @@ li {
 	width: 100px;
 	height: 25px;
 	line-height: 25px;
+	font-size: 16px;
+}
+
+.btn-sm {
+	width: 80px;
+	height: 22px;
+	line-height: 22px;
+	font-size: 14px;
 }
 
 .btn-color-blue1 {
@@ -227,7 +235,6 @@ li {
 	color: white;
 	border-radius: 5px;
 	border: 1px solid #40AFFE;
-	font-size: 16px;
 }
 
 .btn-color-blue2:active {
@@ -716,8 +723,9 @@ li {
 	background: url(../img/img-delete.png) no-repeat;
 	top: -10px;
 	right: -10px;
-	background-color: white;
+	background-color: transparent;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .shuoshuo-img .alter-img {
@@ -727,8 +735,9 @@ li {
 	background: url(../img/img-alter.png) no-repeat;
 	top: -10px;
 	right: 20px;
-	background-color: white;
+	background-color: transparent;
 	cursor: pointer;
+	z-index: 1;
 }
 
 .shuoshuo-img img {
@@ -741,7 +750,7 @@ li {
 	cursor: pointer;
 }
 
-.shuhsuo-addimg {
+.shuoshuo-addimg {
 	background: url(../img/icon-addpic.png) no-repeat;
 	background-position: 0px 25px;
 	height: 140px;
@@ -835,4 +844,9 @@ li {
 .select-div ul li {
 	width: 300px;
 	font-size: 14px;
+}
+
+.ueditor-tool {
+	text-align: right;
+	margin-bottom: 5px;
 }

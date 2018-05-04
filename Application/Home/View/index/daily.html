@@ -11,8 +11,10 @@
 		<link rel="stylesheet" type="text/css" href="../../../../Public/resource/css/viewer.min.css" />
 		<link rel="stylesheet" type="text/css" href="../../../../Public/resource/js/ueditor/themes/default/css/ueditor.css" />
 		<link rel="stylesheet" type="text/css" href="../../../../Public/resource/js/dropdownmenu/dropdownmenu.css" />
+		<link rel="stylesheet" type="text/css" href="../../../../Public/resource/js/layer/theme/default/layer.css" />
 		<link rel="stylesheet" type="text/css" href="../../../../Public/resource/css/style.css" />
-		
+		<link rel="stylesheet" type="text/css" href="../../../../Public/resource/js/highlight/styles/agate.css" />
+
 		<script src="../../../../Public/resource/js/require.js" data-main="../../../../Public/resource/js/require.js"></script>
 		<script src="../../../../Public/resource/js/requireconf.js"></script>
 	</head>
@@ -67,30 +69,35 @@
 
 					<div class="daily-write-box">
 						<ul class="write-tab">
-							<li data-toggle="shuoshuo-write-box">说说</li>
+							<li class="active" data-toggle="shuoshuo-write-box">说说</li>
 							<li data-toggle="note-write-box">日志</li>
-							<li class="active" data-toggle="study-write-box">笔记</li>
+							<li data-toggle="study-write-box">笔记</li>
 						</ul>
 						<!--说说-->
-						<div class="shuoshuo-write-box displaynone">
-							<div class="shuoshuo-write-content">
-								<textarea name="" placeholder="这里输入内容~" class="shushuo-text" rows="" cols=""></textarea>
-							</div>
-							<div class="shuoshuo-write-img">
-								<ul class="shuoshuo-img-list">
-
-								</ul>
-								<div id="shuoshuo-addimg-form" class="displaynone">
-
+						<div class="shuoshuo-write-box">
+							<form action="/Home/Index/uploadShuoShuo" id="shuoShuoForm" method="post" enctype="multipart/form-data">
+								<div class="shuoshuo-write-content">
+									<textarea name="content" id="shuoshuo-content" placeholder="这里输入内容~" class="shushuo-text" rows="" cols=""></textarea>
 								</div>
-								<div class="shuhsuo-addimg"></div>
-							</div>
-							<div>
-								<div class="btn btn-md btn-color-blue2 float-right" id="shuoshuo-submit">发布</div>
-							</div>
+								<div class="shuoshuo-write-img">
+									<ul class="shuoshuo-img-list">
+
+									</ul>
+									<div id="shuoshuo-addimg-form" class="displaynone">
+
+									</div>
+									<div class="shuoshuo-addimg"></div>
+								</div>
+								<div>
+									<div class="btn btn-md btn-color-blue2 float-right" id="shuoshuo-submit">发布</div>
+								</div>
+							</form>
 						</div>
 						<!--日志-->
 						<div class="note-write-box displaynone">
+							<div class="ueditor-tool">
+								<div class="btn btn-sm btn-color-blue2" id="code-inster-daily">插入代码</div>
+							</div>
 							<div class="note-ueditor-box">
 								<script type="text/plain" id="noteEditor" style="width:840px;height:340px;">
 
@@ -101,7 +108,7 @@
 							</div>
 						</div>
 						<!--笔记-->
-						<div class="study-write-box">
+						<div class="study-write-box displaynone">
 							<div>
 								<input type="text" class="input-text-title" placeholder="新建或选择笔记名" name="" id="" value="" />
 							</div>

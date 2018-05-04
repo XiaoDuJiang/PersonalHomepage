@@ -9,12 +9,17 @@ require.config({
 		'zeroclipboard': 'ueditor/third-party/zeroclipboard/ZeroClipboard.min',
 		'tool': 'tool',
 		'dropdownmenu': 'dropdownmenu/dropdownmenu',
+		'jquery.form': 'jquery.form',
+		'highlight': 'highlight/highlight.pack'
 	},
 	shim: {
 		'viewer': {
 			deps: ["jquery"]
 		},
-		'ueditor': ['ueditor.config']
+		'ueditor': ['ueditor.config'],
+		'jquery.form': {
+			deps: ["jquery"]
+		}
 		/*'underscore': {
 			export: '_'
 		},*/

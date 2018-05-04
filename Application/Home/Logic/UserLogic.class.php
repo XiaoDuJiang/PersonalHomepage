@@ -30,10 +30,8 @@ class  UserLogic extends Model
         if (isset($id)) {
             try {
                 //sql查询
-                $condition['u.id'] = 'p.uid';
                 $condition['u.id'] = $id;
-                $condition['_logic'] = 'and';
-                $Data = $Model->table(array('user' => 'u', 'pic' => p))->where($condition)->select();
+                $Data = $Model->table(array('user' => 'u'))->where($condition)->select();
             } catch (Exception $e) {
                 $msg = 'Service错误，sql语句异常./r' . $e->getMessage();
                 return array(
@@ -101,7 +99,7 @@ class  UserLogic extends Model
             $_SESSION['username'] = $UserData['Data'][0]['username'];
 
             //返回成功
-            return array('msg' => '登录成功', 'status' => 1);
+            return array('msg' => '登录成功', 'status' => 1,'asdasd'=>$UserData);
         } else {
             return array('msg' => '账户或密码错误', 'status' => 0);
         }
