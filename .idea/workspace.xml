@@ -4,10 +4,7 @@
     <list default="true" id="88d2be0c-7a16-4c81-a9d7-63638c4baa37" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/Logic/UserLogic.class.php" afterPath="$PROJECT_DIR$/Application/Home/Logic/UserLogic.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/View/index/daily.html" afterPath="$PROJECT_DIR$/Application/Home/View/index/daily.html" />
-      <change beforePath="$PROJECT_DIR$/Public/resource/css/style.css" afterPath="$PROJECT_DIR$/Public/resource/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/Public/resource/js/requireconf.js" afterPath="$PROJECT_DIR$/Public/resource/js/requireconf.js" />
+      <change beforePath="$PROJECT_DIR$/Public/resource/js/ueditor/ueditor.config.js" afterPath="$PROJECT_DIR$/Public/resource/js/ueditor/ueditor.config.js" />
       <change beforePath="$PROJECT_DIR$/Public/resource/js/view/daily.js" afterPath="$PROJECT_DIR$/Public/resource/js/view/daily.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -21,7 +18,38 @@
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="IndexController.class.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="242" column="36" lean-forward="false" selection-start-line="242" selection-start-column="36" selection-end-line="242" selection-end-column="36" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NotetitleLogic.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Logic/NotetitleLogic.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="183">
+              <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="28" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NoteLogic.class.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Application/Home/Logic/NoteLogic.class.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="242">
+              <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="19" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -45,6 +73,7 @@
       <find>dailySave</find>
       <find>ajaxReturn</find>
       <find>return</find>
+      <find>firsttitle</find>
     </findStrings>
     <replaceStrings>
       <replace>$user-&gt;</replace>
@@ -86,6 +115,8 @@
         <option value="$PROJECT_DIR$/Application/Home/Logic/DailyLogic.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Logic/UserLogic.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/LoginController.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Logic/NotetitleLogic.class.php" />
+        <option value="$PROJECT_DIR$/Application/Home/Logic/NoteLogic.class.php" />
         <option value="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
       </list>
     </option>
@@ -97,9 +128,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-7" />
     <option name="width" value="814" />
     <option name="height" value="867" />
   </component>
@@ -201,8 +231,8 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -259,27 +289,28 @@
       <workItem from="1524447496118" duration="2366000" />
       <workItem from="1524558540408" duration="1108000" />
       <workItem from="1525308880072" duration="15969000" />
+      <workItem from="1525394818065" duration="15704000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="74493000" />
+    <option name="totallyTimeSpent" value="90197000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21529563" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.051413883" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32882273" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -462,17 +493,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="13" column="43" lean-forward="false" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="26" column="39" lean-forward="true" selection-start-line="26" selection-start-column="39" selection-end-line="26" selection-end-column="39" />
-          <folding>
-            <element signature="e#98#119#0#PHP" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -496,14 +516,37 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="14" column="1" lean-forward="false" selection-start-line="14" selection-start-column="1" selection-end-line="14" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Application/Home/Logic/DailyLogic.class.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="23" column="5" lean-forward="true" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
+        <state relative-caret-position="440">
+          <caret line="25" column="1" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="25" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Logic/NoteLogic.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="19" column="19" lean-forward="false" selection-start-line="19" selection-start-column="14" selection-end-line="19" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Logic/NotetitleLogic.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="183">
+          <caret line="19" column="28" lean-forward="false" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="242" column="36" lean-forward="false" selection-start-line="242" selection-start-column="36" selection-end-line="242" selection-end-column="36" />
           <folding />
         </state>
       </provider>
