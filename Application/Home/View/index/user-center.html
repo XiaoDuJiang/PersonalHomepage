@@ -1,17 +1,234 @@
 <!DOCTYPE html>
 <html>
+
 	<head>
 		<meta charset="UTF-8">
 		<title>用户中心</title>
 	</head>
+
 	<body>
-		<!--修改昵称-->
-		<!--修改头像-->
-		<!--修改背景-->
-		<!--修改简介-->
-		<!--修改email-->
-		<!--修改tel-->
-		<!--修改github-->
-		<!--修改qq-->
+		<!DOCTYPE html>
+		<html>
+
+		<head>
+			<meta charset="UTF-8" />
+			<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+			<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+			<title></title>
+			<link rel="stylesheet" type="text/css" href="../../../../Public/resource/css/top-icon/iconfont.css" />
+			<link rel="stylesheet" type="text/css" href="../../../../Public/resource/css/userbox-icon/iconfont.css" />
+			<link rel="stylesheet" type="text/css" href="../../../../Public/resource/css/jquery.Jcrop.css" />
+			<link rel="stylesheet" type="text/css" href="../../../../Public/resource/js/layer/theme/default/layer.css" />
+			<link rel="stylesheet" type="text/css" href="../../../../Public/resource/css/style.css" />
+
+			<script src="../../../../Public/resource/js/require.js" data-main="../../../../Public/resource/js/require.js"></script>
+			<script src="../../../../Public/resource/js/requireconf.js"></script>
+		</head>
+
+		<body>
+			<!--导航-->
+			<div class="nav">
+				<div class="container clearfix">
+					<ul class="menu-list float-left">
+						<li class="iconfont icon-shouye">
+							<a href="index.html">首页</a>
+						</li>
+						<li class="iconfont icon-biji">
+							<a href="note.html">笔记</a>
+						</li>
+					</ul>
+					<ul class="setting-list float-right">
+						<li class="iconfont icon-user">
+							<a href="#">个人中心</a>
+						</li>
+						<li class="iconfont icon-suiji">
+							<a href="daily.html">记录</a>
+						</li>
+						<li class="iconfont icon-qiehuanzuhu">
+							<a href="#">注销</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!--头部-->
+			<div class="header">
+				<div class="user-top container">
+					<div class="user-img-circle">
+						<img src="" alt="" />
+					</div>
+					<div class="user-resume">
+						<p></p>
+					</div>
+				</div>
+			</div>
+
+			<!--背景-->
+			<div class="bg-box">
+				<img src="" alt="" />
+			</div>
+
+			<!--内容-->
+			<div class="container article-box">
+				<div>
+					<!--列表-->
+					<div class="article-list">
+
+						<div class="user-center-box">
+							<div class="user-ipt">
+								<ul class="clearfix">
+									<li>
+										<div class="btn btn-md btn-color-blue2" id="alert-headpic">修改头像</div>
+										<form action="/Home/Index/alertHeadPic" method="post" id="headpic-form" enctype="multipart/form-data" class="displaynone">
+											<input type="text" name="x1" id="x1" />
+											<input type="text" name="x2" id="x2" />
+											<input type="text" name="y1" id="y1" />
+											<input type="text" name="y2" id="y2" />
+											<input type="file" name="headpicfile" id="headpic-file" accept="image/jpeg,image/jpg,image/png" value="" />
+										</form>
+									</li>
+									<li>
+										<div class="btn btn-md btn-color-blue2" id="alert-bgpic">修改背景</div>
+										<form action="/Home/Index/alertBgPic" id="bgpic-form" enctype="multipart/form-data" method="post" class="displaynone">
+											<input type="file" name="bgpicfile" id="bgpic-file" accept="image/jpeg,image/jpg,image/png" value="" />
+										</form>
+									</li>
+								</ul>
+							</div>
+							<!--修改昵称-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									昵称：
+								</div>
+								<div>
+									<input type="text" name="" id="username" value="" placeholder="1~8位字符" />
+								</div>
+							</div>
+							<!--修改qq-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									qq：
+								</div>
+								<div>
+									<input type="text" name="" id="qq" value="" placeholder="企鹅" />
+								</div>
+							</div>
+							<!--修改email-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									email：
+								</div>
+								<div>
+									<input type="text" name="" id="email" value="" placeholder="邮箱" style="width: 300px;" />
+								</div>
+							</div>
+							<!--修改tel-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									tel：
+								</div>
+								<div>
+									<input type="text" name="" id="tel" value="" placeholder="电话" style="width: 300px;" />
+								</div>
+							</div>
+							<!--修改github-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									github：
+								</div>
+								<div>
+									<input type="text" name="" id="github" value="" placeholder="网址" style="width: 350px;" />
+								</div>
+							</div>
+							<!--修改简介-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									简介/标题显示：
+								</div>
+								<div>
+									<input type="text" name="" id="resume" value="" placeholder="5~25位字符" style="width: 500px;" />
+								</div>
+							</div>
+							<!--修改标题-->
+							<div class="user-ipt">
+								<div class="ipt-title">
+									标题/网站的头部：
+								</div>
+								<div>
+									<input type="text" name="" id="title" value="" placeholder="5~25位字符" style="width: 500px;" />
+								</div>
+							</div>
+							<!--保存-->
+							<div class="clearfix">
+								<div class="btn btn-md btn-color-blue2 float-right" id="userinfo-submit">保存</div>
+							</div>
+						</div>
+
+						<!--用户信息-->
+						<div class="user-box" style="z-index: 0;margin-top: 32px;">
+							<div class="user-img">
+								<img src="" alt="" />
+							</div>
+							<div class="user-name info-select">
+								<p></p>
+							</div>
+							<div class="user-qq active info-select">
+								<span class="iconfont icon-qq"></span>
+								<span></span>
+							</div>
+							<div class="user-github info-select">
+								<span class="iconfont icon-github"></span>
+								<span><span>
+							</div>
+					<div class="user-email info-select">
+						<span class="iconfont icon-bangdingyouxiang"></span>
+								<span></span>
+							</div>
+							<div class="user-tel info-select">
+								<span class="iconfont icon-dianhua"></span>
+								<span></span>
+							</div>
+							<div class="user-info-show">
+								<p></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--页脚-->
+			<div class="footer">
+				<div class="footer-img container"></div>
+				<div class="footer-content">
+					<div class="container">
+						<div class="foot-font">
+							版权所有 XiaoDuJiang
+						</div>
+						<div class="foot-font">
+							GitHub
+							<a href="https://github.com/XiaoDuJiang">https://github.com/XiaoDuJiang</a>
+						</div>
+						<div class="foot-font">
+							2018-04-25
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="shadow-box displaynone"></div>
+
+			<div class="alert-pic-box displaynone">
+				<div class="alert-pic">
+					<img id="headpic" src="../../../../Public/resource/img/bg.jpg" />
+				</div>
+				<div class="alert-pic-ipt">
+					<div class="btn btn-md btn-color-blue2" id="save-headpic">保存</div>
+					<div class="btn btn-md btn-color-red2" id="cancel-headpic">取消</div>
+				</div>
+			</div>
+
+			<script src="../../../../Public/resource/js/view/user-center.js" type="text/javascript" charset="utf-8"></script>
+		</body>
+
+		</html>
 	</body>
+
 </html>

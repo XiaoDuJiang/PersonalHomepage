@@ -10,7 +10,9 @@ require.config({
 		'tool': 'tool',
 		'dropdownmenu': 'dropdownmenu/dropdownmenu',
 		'jquery.form': 'jquery.form',
-		'highlight': 'highlight/highlight.pack'
+		'highlight': 'highlight/highlight.pack',
+		'jquery.jcrop':'jquery.Jcrop',
+		
 	},
 	shim: {
 		'viewer': {
@@ -18,6 +20,9 @@ require.config({
 		},
 		'ueditor': ['ueditor.config'],
 		'jquery.form': {
+			deps: ["jquery"]
+		},
+		'jquery.jcrop': {
 			deps: ["jquery"]
 		}
 		/*'underscore': {

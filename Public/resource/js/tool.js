@@ -35,8 +35,69 @@ define(['jquery'], function($) {
 					$(".user-box").css("left", "auto");
 				}
 			}
+		},
+		initUserInfo: function() {
+			$.ajax({
+				type: "post",
+				url: "/Home/Index/getUserInfo",
+				async: true,
+				beforeSend: function() {
+					loadLayer = layer.load(1);
+				},
+				success: function(data) {
+					if(data.status == 1) {
+						data = data.list.data.Data[0];
+						$("title").text(data.title);
+						if(data.headpic) {
+							$(".user-img-circle img").attr("src", data.headpic);
+							$(".user-box .user-img img").attr("src", data.headpic);
+						} else {
+							$(".user-img-circle img").attr("src", '../../../../Public/resource/img/login-bg2.jpg');
+							$(".user-box .user-img img").attr("src", '../../../../Public/resource/img/login-bg2.jpg');
+						}
+						$(".user-resume p").text(data.resume);
+						if(data.bgpic) {
+							$(".header").css({
+								"background": 'url(' + data.bgpic + ') no-repeat',
+								"background-size": "100% auto"
+							});
+						}
+						$(".user-box .user-name p").text(data.username);
+						if(data.qq) {
+							$(".user-box .user-qq span").eq(1).text(data.qq);
+						} else {
+							$(".user-box .user-qq span").eq(1).text('暂无');
+						}
+						if(data.github) {
+							$(".user-box .user-github span").eq(1).html(
+								'<a target="_blank" href="' + data.github + '">' + data.github.split('github.com/')[1] + '</a>'
+							);
+						} else {
+							$(".user-box .user-github span").eq(1).html(
+								'<a href="javascript:void(0)">暂无</a>'
+							);
+						}
+						if(data.email) {
+							$(".user-box .user-email span").eq(1).text(data.email);
+						} else {
+							$(".user-box .user-email span").eq(1).text('暂无');
+						}
+						if(data.tel) {
+							$(".user-box .user-tel span").eq(1).text(data.tel);
+						} else {
+							$(".user-box .user-tel span").eq(1).text('暂无');
+						}
+						$(".user-box .user-info-show p").text(
+							$(".user-box .user-qq span").eq(1).text()
+						);
+						layer.close(loadLayer);
+					} else {
+						layer.close(loadLayer);
+						layer.alert("用户信息获取失败:" + data.msg);
+					}
+				}
+			});
 		}
-
 	}
 
 	return tool;

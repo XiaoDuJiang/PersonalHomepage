@@ -257,8 +257,7 @@ class  UserLogic extends Model
     public function alterUserInfo($user)
     {
         try {
-            $UserM = M('User');
-            $UserM->data($user)->save();
+            $user->save();
             return array('status' => '1');
         } catch (Exception $e) {
             return array('status' => '0');
