@@ -81,6 +81,38 @@ require(['layer', 'tool', 'jquery.form', 'jquery.jcrop'], function(layer, tool) 
 							$("#github").val(github);
 							$("#resume").val(resume);
 							$("#title").val(title);
+
+							$("title").text(title);
+							$(".user-resume p").text(resume);
+
+							$(".user-box .user-name p").text(username);
+							if(qq) {
+								$(".user-box .user-qq span").eq(1).text(qq);
+							} else {
+								$(".user-box .user-qq span").eq(1).text('暂无');
+							}
+							if(github) {
+								$(".user-box .user-github span").eq(1).html(
+									'<a target="_blank" href="' + github + '">' + github.split('github.com/')[1] + '</a>'
+								);
+							} else {
+								$(".user-box .user-github span").eq(1).html(
+									'<a href="javascript:void(0)">暂无</a>'
+								);
+							}
+							if(email) {
+								$(".user-box .user-email span").eq(1).text(email);
+							} else {
+								$(".user-box .user-email span").eq(1).text('暂无');
+							}
+							if(tel) {
+								$(".user-box .user-tel span").eq(1).text(tel);
+							} else {
+								$(".user-box .user-tel span").eq(1).text('暂无');
+							}
+							$(".info-select").eq(1).trigger("click");
+							
+
 							layer.close(loadLayer);
 							layer.msg("保存成功", {
 								time: 1500

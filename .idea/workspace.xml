@@ -2,13 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88d2be0c-7a16-4c81-a9d7-63638c4baa37" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" afterPath="$PROJECT_DIR$/Application/Home/Controller/IndexController.class.php" />
-      <change beforePath="$PROJECT_DIR$/Application/Home/Logic/UserLogic.class.php" afterPath="$PROJECT_DIR$/Application/Home/Logic/UserLogic.class.php" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/View/index/daily.html" afterPath="$PROJECT_DIR$/Application/Home/View/index/daily.html" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/View/index/index.html" afterPath="$PROJECT_DIR$/Application/Home/View/index/index.html" />
+      <change beforePath="$PROJECT_DIR$/Application/Home/View/index/note.html" afterPath="$PROJECT_DIR$/Application/Home/View/index/note.html" />
       <change beforePath="$PROJECT_DIR$/Application/Home/View/index/user-center.html" afterPath="$PROJECT_DIR$/Application/Home/View/index/user-center.html" />
-      <change beforePath="$PROJECT_DIR$/Public/resource/css/style.css" afterPath="$PROJECT_DIR$/Public/resource/css/style.css" />
-      <change beforePath="$PROJECT_DIR$/Public/resource/js/requireconf.js" afterPath="$PROJECT_DIR$/Public/resource/js/requireconf.js" />
-      <change beforePath="$PROJECT_DIR$/Public/resource/js/tool.js" afterPath="$PROJECT_DIR$/Public/resource/js/tool.js" />
+      <change beforePath="$PROJECT_DIR$/Public/resource/js/view/user-center.js" afterPath="$PROJECT_DIR$/Public/resource/js/view/user-center.js" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -305,12 +303,12 @@
       <workItem from="1525676280969" duration="12000" />
       <workItem from="1525749764589" duration="608000" />
       <workItem from="1525843407715" duration="1807000" />
-      <workItem from="1525919083420" duration="18019000" />
+      <workItem from="1525919083420" duration="18554000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="110758000" />
+    <option name="totallyTimeSpent" value="111293000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
