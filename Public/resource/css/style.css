@@ -944,3 +944,102 @@ li {
 .alert-pic-ipt>div {
 	margin-left: 10px;
 }
+
+.note-content {
+	width: 940px;
+	position: relative;
+}
+
+.note-article-box {
+	background-color: white;
+	width: 900px;
+	padding: 20px;
+	border-radius: 20px;
+	position: relative;
+	min-height: 200px;
+}
+
+.note-title {
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 30px;
+}
+
+.note-article {
+	padding: 25px 10px;
+}
+
+.note-article * {
+	-moz-user-select: text;
+	-ms-user-select: text;
+	-webkit-user-select: text;
+}
+
+.note-tree {
+	box-shadow: 1px 1px 1px gray;
+	border: #E7E7E7;
+	border-radius: 5px;
+	border-top-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+	background-color: #ccffff;
+	background-color: rgba(204,255,255,0.9);
+	position: absolute;
+	z-index: 1;
+	top: 30px;
+	left: 0px;
+	padding: 5px 10px;
+}
+
+.note-tree-title {
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 23px;
+	padding-right: 30px;
+	cursor: pointer;
+	color: #ff3366;
+}
+
+.up-icon-red {
+	background: url(../img/up.png) no-repeat right;	
+}
+
+.up-icon-red {
+	background: url(../img/up.png) no-repeat right;	
+}
+
+.up-icon-red {
+	background: url(../img/up-red.png) no-repeat right;	
+}
+
+.down-icon-red {
+	background: url(../img/down-red.png) no-repeat right;	
+}
+
+.note-tree-list>p{
+	font-size: 16px;
+	padding-left: 20px;
+	padding-right: 20px;
+	cursor: pointer;
+	line-height: 25px;
+}
+
+.note-tree-list .active {
+	color: #ff3366;
+}
+
+.note-tree-list>li {
+	font-size: 14px;
+	padding-left: 40px;
+	cursor: pointer;
+	line-height: 22px;
+}
+
+.note-tree-list>li:hover,
+.note-tree-list>p:hover {
+	color: #ff3366;
+}
+
+.hljs {
+	border-radius: 10px;
+}

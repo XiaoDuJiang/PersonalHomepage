@@ -1,4 +1,4 @@
-require(['layer', 'tool', 'jquery.form', 'jquery.jcrop'], function(layer, tool) {
+require(['layer', 'tool', 'jquery', 'jquery.form', 'jquery.jcrop'], function(layer, tool, $) {
 	//加载
 	var loadLayer;
 	//用户信息初始化
@@ -111,7 +111,6 @@ require(['layer', 'tool', 'jquery.form', 'jquery.jcrop'], function(layer, tool) 
 								$(".user-box .user-tel span").eq(1).text('暂无');
 							}
 							$(".info-select").eq(1).trigger("click");
-							
 
 							layer.close(loadLayer);
 							layer.msg("保存成功", {

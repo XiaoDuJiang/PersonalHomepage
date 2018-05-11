@@ -488,4 +488,87 @@ class IndexController extends Controller
         }
     }
 
+    /**
+     * 根据笔记id获取笔记信息
+     */
+    public function getNoteInfoById()
+    {
+        if (IS_AJAX) {
+            $result = array();
+            if ($_POST['nodetitle_id']) {
+                $Model = M();
+                //获取笔记标题
+                $condition['id'] = $_POST['nodetitle_id'];
+                $notetitle = $Model->table('notetitle')->where($condition)->select();
+
+                if (sizeof($notetitle) > 0) {
+                    //获取笔记一级标题
+                    unset($condition);
+                    $condition['titleid'] = $_POST['nodetitle_id'];
+                    $condition['index'] = array('eq', 0);
+                    $noteFirst = $Model->field('id,title,fatherid,index,createtime')->table('note')->where($condition)->select();
+
+                    //获取笔记二级标题
+                    unset($condition);
+                    $condition['titleid'] = $_POST['nodetitle_id'];
+                    $condition['index'] = array('eq', 1);
+                    $noteSecond = $Model->field('id,title,fatherid,index,createtime')->table('note')->where($condition)->select();
+
+                    $newNodeList = array();
+                    //标题数组排序
+                    foreach ($noteFirst as $fstNode) {
+                        array_push($newNodeList, $fstNode);
+                        foreach ($noteSecond as $secNode) {
+                            if ($secNode['fatherid'] == $fstNode['id']) {
+                                array_push($newNodeList, $secNode);
+                            }
+                        }
+                    }
+
+                    if (sizeof($newNodeList) > 0) {
+                        $result['msg'] = '成功';
+                        $result['status'] = 1;
+                        $result['list']['nodelist'] =  $newNodeList;
+                        $result['list']['title'] = $notetitle;
+                    } else {
+                        $result['msg'] = '获取笔记错误';
+                        $result['status'] = 0;
+                    }
+
+                } else {
+                    $result['msg'] = 'id不存在';
+                    $result['status'] = 0;
+                }
+
+            } else {
+                $result['msg'] = 'id未传入';
+                $result['status'] = 0;
+            }
+            $this->ajaxReturn($result);
+        }
+    }
+
+    /**
+     * 通过id获取笔记
+     */
+    public function getNoteContentById() {
+        if (IS_AJAX) {
+            $result = array();
+            if($_POST['node_id']){
+                $condition['id'] = array('eq',$_POST['node_id']);
+                $note_content = M('note')->field('content')->where($condition)->select();
+
+                if($note_content > 0) {
+                    $result['msg'] = '成功';
+                    $result['status'] = 1;
+                    $result['list'] = $note_content;
+                } else {
+                    $result['msg'] = 'id不存在';
+                    $result['status'] = 0;
+                }
+            }
+            $this->ajaxReturn($result);
+        }
+    }
+
 }
