@@ -65,7 +65,9 @@ require(['jquery', 'layer', 'viewer', 'highlight'], function($, layer) {
 						$(".note-tree-list p").bind("click", function() {
 							notetitleClick(this);
 						});
-
+						
+						$(".note-tree-list p").eq(0).trigger("click");
+						
 						layer.close(loadLayer);
 					} else {
 						layer.close(loadLayer);
