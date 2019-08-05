@@ -8,6 +8,7 @@
 
 namespace Home\Controller;
 
+use Home\Logic\DailyLogic;
 use Think\Controller;
 use Think\Exception;
 
@@ -528,7 +529,7 @@ class IndexController extends Controller
                     if (sizeof($newNodeList) > 0) {
                         $result['msg'] = '成功';
                         $result['status'] = 1;
-                        $result['list']['nodelist'] =  $newNodeList;
+                        $result['list']['nodelist'] = $newNodeList;
                         $result['list']['title'] = $notetitle;
                     } else {
                         $result['msg'] = '获取笔记错误';
@@ -551,14 +552,15 @@ class IndexController extends Controller
     /**
      * 通过id获取笔记
      */
-    public function getNoteContentById() {
+    public function getNoteContentById()
+    {
         if (IS_AJAX) {
             $result = array();
-            if($_POST['node_id']){
-                $condition['id'] = array('eq',$_POST['node_id']);
+            if ($_POST['node_id']) {
+                $condition['id'] = array('eq', $_POST['node_id']);
                 $note_content = M('note')->field('content')->where($condition)->select();
 
-                if($note_content > 0) {
+                if ($note_content > 0) {
                     $result['msg'] = '成功';
                     $result['status'] = 1;
                     $result['list'] = $note_content;
@@ -570,5 +572,15 @@ class IndexController extends Controller
             $this->ajaxReturn($result);
         }
     }
+
+    /**
+     * 根据日志获取随记信息
+     */
+    public function getDailyListByPage($page = 1, $page_num = 3)
+    {
+        $dailyLog = new DailyLogic();
+        $dailyLog->getDailyListByPage($page, $page_num);
+    }
+
 
 }

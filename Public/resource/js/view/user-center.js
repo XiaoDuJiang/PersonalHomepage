@@ -129,7 +129,6 @@ require(['layer', 'tool', 'jquery', 'jquery.form', 'jquery.jcrop'], function(lay
 			} else {
 				layer.alert("昵称、简介、标题为必填项");
 			}
-
 		});
 	}
 

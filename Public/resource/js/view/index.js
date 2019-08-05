@@ -7,6 +7,8 @@ require(['jquery', 'tool', 'viewer'], function($, tool) {
 	tool.bindUserBoxFixed();
 	//绑定附属信息点击事件
 	tool.bindUserInfoCilck();
+	//用户信息初始化
+	tool.initUserInfo();
 	//绑定阅读全文事件
 	bindReadMore();
 
@@ -26,6 +28,11 @@ require(['jquery', 'tool', 'viewer'], function($, tool) {
 				});
 			}
 		});
+	}
+
+	//获取说说和日志列表
+	function getDataListByPage() {
+		
 	}
 
 });

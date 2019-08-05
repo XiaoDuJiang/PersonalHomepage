@@ -1,4 +1,4 @@
-define(['jquery'], function($) {
+define(['jquery','layer'], function($,Layer) {
 	var tool = {
 		//绑定附属信息点击事件
 		bindUserInfoCilck: function() {
@@ -42,7 +42,7 @@ define(['jquery'], function($) {
 				url: "/Home/Index/getUserInfo",
 				async: true,
 				beforeSend: function() {
-					loadLayer = layer.load(1);
+					loadLayer = Layer.load(1);
 				},
 				success: function(data) {
 					if(data.status == 1) {
@@ -90,10 +90,10 @@ define(['jquery'], function($) {
 						$(".user-box .user-info-show p").text(
 							$(".user-box .user-qq span").eq(1).text()
 						);
-						layer.close(loadLayer);
+						Layer.close(loadLayer);
 					} else {
-						layer.close(loadLayer);
-						layer.alert("用户信息获取失败:" + data.msg);
+						Layer.close(loadLayer);
+						Layer.alert("用户信息获取失败:" + data.msg);
 					}
 				}
 			});
